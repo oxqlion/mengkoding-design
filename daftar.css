@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #38ef7d;
+    transition: 500ms ease-in-out;
+}
+
+body.active{
+    background: #212121;
+}
+
+.container{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 20px;
+}
+
+.blue_bg{
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.15);
+}
+
+.box{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box h2{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.box button{
+    cursor: pointer;
+    padding: 10px 20px;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+}
+
+.form_box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.25);
+    transition: 500ms ease-in-out;
+    overflow-x: hidden;
+}
+
+.active{
+    left: 50%;
+}
+
+.form{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 50px;
+    transition: 500ms ease-in-out;
+}
+
+.form_box .signin_form{
+    transition-delay: 200ms;
+}
+
+.form_box.active .signin_form{
+    left: -100%;
+    transition-delay: 0s;
+}
+
+.form_box .signup_form{
+    left: 100%;
+    transition-delay: 0;
+
+}
+
+.form_box.active .signup_form{
+    left: 0;
+    transition-delay: 200ms;
+
+}
+
+.form form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form form h3{
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.form form input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: none;
+    font-size: 1rem;
+    background: #f8f8f8;
+    border-radius: 5px;
+    border: none;
+}
+
+.form form input[type="submit"]{
+    background: #38ef7d;
+    border: none;
+    color: #fff;
+    max-width: 100px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.main_btn{
+    background: #38ef7d;
+    border: none;
+    color: #fff;
+    max-width: 100px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+
+.daftar_btn{
+    background: #212121;
+    border: none;
+    color: #fff;
+    max-width: 100px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+
+.form_box.active .signup_form input[type="submit"]{
+    background: #212121;
+}
+
+.form form .forgot{
+    color: #333;
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
+
+@media screen and (max-width: 960px) {
+    body{
+        align-items: normal;
+    }
+
+    .container{
+        max-width: 400px;
+        height: 650px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .blue_bg{
+        top: 0;
+        height: 100%;
+
+    }
+
+    .form_box{
+        width: 100%;
+        height: 500px;
+        top: 0;
+        box-shadow: none;
+    }
+
+    .box{
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        bottom: 0;
+    }
+
+    .signin{
+        top: 0;
+    }
+
+    .form_box.active{
+        left: 0;
+        top: 150px;
+    }
+}
+
+
+
